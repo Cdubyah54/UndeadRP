@@ -111,7 +111,7 @@
 				<decoration type="block" blockname="treeMountainPine48m" prob="0.005" rotatemax="7"/>
 				<decoration type="block" blockname="treeStump" prob=".001" rotatemax="7"/>
 			</decorations>
-			<terrain class="City"/>
+			<terrain class="Desert"/>
 		</biome>
 
 	<!-- Wasteland becomes Pine Forest w/ custom tweaks. This forest is going to be more dense w/ more trees / undergrowth / more rugged / more resources -->
@@ -219,7 +219,7 @@
 				<decoration type="block" blockname="treeMountainPine48m" prob="0.02" rotatemax="7"/>
 				<decoration type="block" blockname="treeStump" prob=".001" rotatemax="7"/>
 			</decorations>
-			<terrain class="City"/>
+			<terrain class="Desert"/>
 		</biome>
 </append>
 </UndeadRP>
