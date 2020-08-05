@@ -1,0 +1,81 @@
+<configs>
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage2Master']">	
+		<property name="DowngradeBlock" value="carRespawn"/>
+	</append>
+	<append xpath="/blocks/block[@name='cntBusSchool']">	
+		<property name="DowngradeBlock" value="busRespawn"/>
+	</append>
+	<append xpath="/blocks/block[@name='cntArmyTruckClosed']">	
+		<property name="DowngradeBlock" value="truckRespawn"/>
+	</append>
+	<append xpath="/blocks/block[@name='cntArmyTruckOpen']">	
+		<property name="DowngradeBlock" value="truckRespawn"/>
+	</append>
+	<append xpath="/blocks">
+		<block name="carRespawn">
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master" />
+			<property name="CustomIconTint" value="4B0082"/>		
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />	
+			<property name="Material" value="Mair"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="Invisible"/>
+			<!--<property name="Texture" value="350,368,369,370,350,368"/>	-->	
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" count="0" />	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="respCarsHelper" />
+<!-- Multiply the respawn days number by the 24 Hour Cycle. e.g. 7 days X 60 min = 420 -->
+			<property name="PlantGrowing.GrowthRate" value="420" />
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+			<property name="DisplayInfo" value="Name"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="FilterTags" value="floot,fdesign"/>
+			<property name="CreativeMode" value="Dev"/>
+		</block>
+	
+		<block name="respCarsHelper">
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="9f1111"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="1"/>
+			<property name="IsReplaceRandom" value="false"/>
+			<!--<property name="Texture" value="277"/>-->
+			<!--<property name="Mesh" value="opaque2"/>-->
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#Entities/Vehicles?Car/car_white_dmg0Prefab.prefab"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<!--<property name="FilterTags" value="floot,fdesign"/>-->
+			<property name="DisplayInfo" value="Name"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DowngradeBlock" value="carRespawn"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="busRespawn">
+			<property name="Extends" value="carRespawn"/>
+			<property name="CustomIcon" value="cntBusSchool" />
+			<property name="PlantGrowing.Next" value="respBusHelper" />
+		</block>
+		<block name="respBusHelper">
+			<property name="Extends" value="respCarsHelper"/>
+			<property name="CustomIcon" value="cntBusSchool" />
+			<property name="Model" value="#Entities/Vehicles?busPrefab.prefab"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DowngradeBlock" value="busRespawn"/>
+		</block>
+		<block name="truckRespawn">
+			<property name="Extends" value="carRespawn"/>
+			<property name="CustomIcon" value="cntArmyTruckClosed" />
+			<property name="PlantGrowing.Next" value="respTruckHelper" />
+		</block>
+		<block name="respTruckHelper">
+			<property name="Extends" value="respCarsHelper"/>
+			<property name="CustomIcon" value="cntArmyTruckClosed" />
+			<property name="Model" value="#Entities/Vehicles?Truck/armyTruckPrefab.prefab"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DowngradeBlock" value="truckRespawn"/>
+		</block>
+	</append>
+</configs>
