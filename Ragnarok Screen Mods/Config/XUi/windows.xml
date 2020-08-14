@@ -1,10 +1,6 @@
 <configs>
-
-
-
-
 	<insertAfter xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']">
-		<texture name="ItemBackground" size="603,346" depth="10" pos="0,-46" material="Materials/Transparent Colored" texture="@https://i.gyazo.com/thumb/1200/4b53122960c131640dbcb927f62b4297-jpg.jpg"/>
+		<texture name="ItemBackground" size="603,346" depth="10" pos="0,-46" material="Materials/Transparent Colored" texture="@https://cdn.discordapp.com/attachments/730282833112989788/740624420304846868/UndeadRP_LoadScreen.jpg"/>
 	</insertAfter>
 
 
@@ -13,7 +9,7 @@
 
 
 	<append xpath="/windows/window[@name='serverjoinrulesdialog']/panel[@name='content']">
-		<texture name="ItemBackground" depth="10" size="900,500" texture="@https://i.gyazo.com/thumb/1200/4b53122960c131640dbcb927f62b4297-jpg.jpg" material="Materials/Transparent Colored" pos="0,0" />
+		<texture name="ItemBackground" size="900,500" depth="10" pos="0,0" material="Materials/Transparent Colored" texture="@https://cdn.discordapp.com/attachments/730282833112989788/740624420304846868/UndeadRP_LoadScreen.jpg"/>
 	</append>
 	
 
@@ -26,7 +22,5 @@ IF USING LOGIN SCREEN CHANGE BELOW LINE IN SERVERCONFIG.XML SO THAT IT POPS UP
 
 <property name="ServerLoginConfirmationText"	value="." />	
 -->
-
-
 
 </configs>
